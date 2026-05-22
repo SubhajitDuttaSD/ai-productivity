@@ -1,0 +1,108 @@
+.body-section {
+  padding-block: var(--spacing-48);
+}
+
+.body-section__header {
+  margin-bottom: var(--spacing-32);
+}
+
+.body-card {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-16);
+  padding: var(--spacing-24);
+  min-height: 280px;
+  background: var(--color-gray-100);
+  border: 1px solid var(--color-gray-200);
+  border-radius: var(--spacing-12);
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    border-color 0.2s ease,
+    color 0.2s ease;
+}
+
+.body-card:hover {
+  background: var(--color-brand);
+  border-color: var(--color-brand);
+}
+
+.body-card:hover .body-card__title,
+.body-card:hover .body-card__text {
+  color: var(--color-white);
+}
+
+.body-card:hover .body-card__media {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.body-card--accent:hover {
+  background: var(--color-blue-500);
+  border-color: var(--color-blue-500);
+}
+
+.body-card--green:hover {
+  background: var(--color-green-700);
+  border-color: var(--color-green-700);
+}
+
+.body-card__media {
+  flex: 1;
+  min-height: 120px;
+  border-radius: var(--spacing-8);
+  background: var(--color-gray-200);
+  transition: background-color 0.2s ease;
+}
+
+.body-card__title {
+  font-family: var(--font-body);
+  font-feature-settings: var(--heading-font-features);
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--color-black);
+  transition: color 0.2s ease;
+}
+
+.body-card__text {
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  color: var(--color-gray-700);
+  transition: color 0.2s ease;
+}
+
+.body-section--dark {
+  background: var(--color-black);
+  margin-inline: calc(-1 * var(--min-page-margin));
+  padding-inline: var(--min-page-margin);
+}
+
+.body-section--dark .body-section__header h2,
+.body-section--dark .body-section__header p {
+  color: var(--color-white);
+}
+
+.body-section--dark .body-section__header p {
+  color: var(--color-gray-300);
+}
+
+.body-section--dark .body-card {
+  background: var(--color-gray-900);
+  border-color: var(--color-gray-800);
+}
+
+.body-section--dark .body-card__title {
+  color: var(--color-white);
+}
+
+.body-section--dark .body-card__text {
+  color: var(--color-gray-300);
+}
+
+.body-section--dark .body-card__media {
+  background: var(--color-gray-800);
+}
+
+.body-section--dark .body-card:hover {
+  background: var(--color-magenta-500);
+  border-color: var(--color-magenta-500);
+}
