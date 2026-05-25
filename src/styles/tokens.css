@@ -66,10 +66,20 @@
   --theme-shadow: rgba(11, 11, 11, 0.12);
   --theme-inverse-bg: var(--color-black);
   --theme-inverse-text: var(--color-white);
-  --theme-workflow-bg: var(--color-black);
-  --theme-workflow-panel: var(--color-gray-900);
-  --theme-workflow-border: var(--color-gray-800);
-  --theme-workflow-text: var(--color-white);
+  --theme-workflow-bg: var(--theme-panel);
+  --theme-workflow-panel: var(--theme-panel-strong);
+  --theme-workflow-border: var(--theme-border);
+  --theme-workflow-text: var(--theme-text);
+  --theme-deep-bg:
+    radial-gradient(circle at 12% 8%, rgba(255, 86, 10, 0.1), transparent 28rem),
+    radial-gradient(circle at 86% 12%, rgba(85, 190, 255, 0.12), transparent 26rem),
+    linear-gradient(180deg, #fff 0%, #f8f7f3 100%);
+  --theme-deep-panel: var(--theme-panel-strong);
+  --theme-deep-panel-soft: var(--theme-panel);
+  --theme-deep-text: var(--theme-text);
+  --theme-deep-muted: var(--theme-muted);
+  --theme-deep-border: var(--theme-border);
+  --theme-deep-shadow: var(--theme-shadow);
 
   --radius-none: 0;
   --radius-full: 99999px;
@@ -119,4 +129,11 @@
   --theme-workflow-panel: rgba(255, 255, 255, 0.08);
   --theme-workflow-border: rgba(255, 255, 255, 0.14);
   --theme-workflow-text: #f8f7f3;
+  --theme-deep-bg: #080808;
+  --theme-deep-panel: rgba(255, 255, 255, 0.07);
+  --theme-deep-panel-soft: rgba(255, 255, 255, 0.06);
+  --theme-deep-text: var(--color-white);
+  --theme-deep-muted: rgba(255, 255, 255, 0.62);
+  --theme-deep-border: rgba(255, 255, 255, 0.12);
+  --theme-deep-shadow: rgba(0, 0, 0, 0.42);
 }

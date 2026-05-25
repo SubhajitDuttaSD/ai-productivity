@@ -1,8 +1,11 @@
 import { useEffect, useState } from 'react'
 import { Navbar } from './components/layout/Navbar'
 import { BodySection } from './components/sections/BodySection'
+import { CapabilitiesSection } from './components/sections/CapabilitiesSection'
 import { ContactSection } from './components/sections/ContactSection'
 import { HeroSection } from './components/sections/HeroSection'
+import { ProblemSection } from './components/sections/ProblemSection'
+import { TimelineSection } from './components/sections/TimelineSection'
 import { PageLoader } from './components/ui/PageLoader'
 import type { ResolvedTheme, ThemeMode } from './types/theme'
 
@@ -58,7 +61,10 @@ function App() {
       <PageLoader visible={isLoading} />
       <Navbar themeMode={themeMode} resolvedTheme={resolvedTheme} onThemeChange={cycleTheme} />
       <HeroSection />
+      <ProblemSection />
+      <CapabilitiesSection />
       <BodySection />
+      <TimelineSection />
       <ContactSection />
     </div>
   )

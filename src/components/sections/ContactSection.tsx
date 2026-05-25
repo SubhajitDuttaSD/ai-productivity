@@ -1,42 +1,65 @@
 import { motion } from 'framer-motion'
-import { Mail, MapPin, Phone } from 'lucide-react'
-import { contactLinks } from '../../data/siteContent'
-
-const icons = [Mail, Phone, MapPin] as const
+import { ArrowRight } from 'lucide-react'
+import { footerColumns, legalLinks } from '../../data/siteContent'
 
 export function ContactSection() {
   return (
     <footer className="contact-section" id="contact">
       <div className="page">
-        <div className="grid-12 contact-section__grid">
-          <motion.div
-            className="contact-section__copy span-6"
-            initial={{ opacity: 0, y: 18 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true, margin: '-80px' }}
-            transition={{ duration: 0.35, ease: 'easeOut' }}
-          >
-            <p className="section-heading__eyebrow font-nav nav-label">Contact</p>
-            <h2>Ready to shape this into your actual website?</h2>
-            <p>
-              Swap the placeholder content, connect real forms, and extend the design system from
-              this CSS-first foundation.
-            </p>
-          </motion.div>
-
-          <div className="contact-links span-6">
-            {contactLinks.map((link, index) => {
-              const Icon = icons[index]
-
-              return (
-                <a href={link.href} className="contact-link" key={link.label}>
-                  <Icon size={18} aria-hidden />
-                  <span>{link.label}</span>
-                </a>
-              )
-            })}
+        <motion.div
+          className="contact-section__grid"
+          initial={{ opacity: 0, y: 18 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, margin: '-80px' }}
+          transition={{ duration: 0.35, ease: 'easeOut' }}
+        >
+          <div className="contact-section__cta">
+            <div>
+              <h2>Smooth shipping is a few steps away</h2>
+              <p>
+                Let&apos;s see how we can help your team move faster. From developer platforms to
+                AI workflows that get your team shipping again.
+              </p>
+            </div>
+            <a href="mailto:hello@aiproductivity.studio" className="contact-section__button">
+              Get in Touch
+              <ArrowRight size={15} aria-hidden />
+            </a>
           </div>
-        </div>
+
+          <div className="contact-section__middle">
+            <div className="contact-section__brand">
+              <a href="#" className="contact-section__logo">
+                ai productivity
+              </a>
+              <p>Platform engineering for AI teams. Turn your infrastructure into a competitive advantage.</p>
+            </div>
+
+            {footerColumns.map((column) => (
+              <div className="contact-section__column" key={column.title}>
+                <h3>{column.title}</h3>
+                <ul>
+                  {column.links.map((link) => (
+                    <li key={link}>
+                      <a href={`#${link.toLowerCase().replaceAll(' ', '-')}`}>{link}</a>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            ))}
+          </div>
+
+          <div className="contact-section__legal">
+            <p>© AI Productivity 2026. All rights reserved.</p>
+            <div>
+              {legalLinks.map((link) => (
+                <a href={`#${link.toLowerCase().replaceAll(' ', '-')}`} key={link}>
+                  {link}
+                </a>
+              ))}
+            </div>
+          </div>
+        </motion.div>
       </div>
     </footer>
   )

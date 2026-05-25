@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowUpRight } from 'lucide-react'
 import { featureCards, processSteps } from '../../data/siteContent'
+import { SyncedScrollSection } from './SyncedScrollSection'
 
 const accentClass = {
   brand: 'feature-card--brand',
@@ -43,6 +44,8 @@ export function BodySection() {
           ))}
         </div>
       </section>
+
+      <SyncedScrollSection />
 
       <section className="workflow-section" id="workflow">
         <div className="page">
