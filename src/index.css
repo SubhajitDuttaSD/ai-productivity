@@ -4,6 +4,7 @@
 @import './styles/typography.css';
 @import './styles/navbar.css';
 @import './styles/body.css';
+@import './styles/site.css';
 
 @theme {
   --color-brand: var(--color-brand);
@@ -20,8 +21,8 @@ body {
   font-family: var(--font-body);
   font-size: 1rem;
   line-height: 1.5;
-  color: var(--color-black);
-  background: var(--color-white);
+  color: var(--theme-text);
+  background: var(--theme-bg);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -36,6 +37,12 @@ body {
   min-height: 100svh;
   display: flex;
   flex-direction: column;
+  overflow: hidden;
+  color: var(--theme-text);
+  background: var(--theme-bg);
+  transition:
+    background 0.28s ease,
+    color 0.28s ease;
 }
 
 .app__main {

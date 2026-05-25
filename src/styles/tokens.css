@@ -50,6 +50,27 @@
   --color-yellow-500: #fdfe00;
   --color-yellow-700: #fff500;
 
+  --theme-bg:
+    radial-gradient(circle at 12% 8%, rgba(255, 86, 10, 0.12), transparent 28rem),
+    radial-gradient(circle at 88% 24%, rgba(85, 190, 255, 0.14), transparent 26rem),
+    linear-gradient(180deg, #fff 0%, #f8f7f3 48%, #fff 100%);
+  --theme-text: var(--color-black);
+  --theme-muted: var(--color-gray-700);
+  --theme-subtle: var(--color-gray-500);
+  --theme-panel: rgba(255, 255, 255, 0.72);
+  --theme-panel-strong: rgba(255, 255, 255, 0.88);
+  --theme-panel-soft: rgba(255, 255, 255, 0.62);
+  --theme-border: var(--color-gray-200);
+  --theme-hover: var(--color-gray-100);
+  --theme-header: color-mix(in srgb, var(--color-white) 88%, transparent);
+  --theme-shadow: rgba(11, 11, 11, 0.12);
+  --theme-inverse-bg: var(--color-black);
+  --theme-inverse-text: var(--color-white);
+  --theme-workflow-bg: var(--color-black);
+  --theme-workflow-panel: var(--color-gray-900);
+  --theme-workflow-border: var(--color-gray-800);
+  --theme-workflow-text: var(--color-white);
+
   --radius-none: 0;
   --radius-full: 99999px;
 
@@ -74,4 +95,28 @@
   --spacing-40: 2.5rem;
   --spacing-48: 3rem;
   --spacing-64: 4rem;
+}
+
+.app[data-theme='dark'] {
+  --theme-bg:
+    radial-gradient(circle at 12% 8%, rgba(255, 86, 10, 0.18), transparent 30rem),
+    radial-gradient(circle at 84% 18%, rgba(0, 132, 248, 0.22), transparent 28rem),
+    radial-gradient(circle at 50% 80%, rgba(255, 35, 252, 0.12), transparent 30rem),
+    linear-gradient(180deg, #080808 0%, #101010 48%, #070707 100%);
+  --theme-text: #f8f7f3;
+  --theme-muted: #c7c7c7;
+  --theme-subtle: #979797;
+  --theme-panel: rgba(22, 22, 22, 0.76);
+  --theme-panel-strong: rgba(28, 28, 28, 0.9);
+  --theme-panel-soft: rgba(22, 22, 22, 0.62);
+  --theme-border: rgba(255, 255, 255, 0.12);
+  --theme-hover: rgba(255, 255, 255, 0.08);
+  --theme-header: rgba(8, 8, 8, 0.78);
+  --theme-shadow: rgba(0, 0, 0, 0.48);
+  --theme-inverse-bg: #f8f7f3;
+  --theme-inverse-text: #0b0b0b;
+  --theme-workflow-bg: rgba(255, 255, 255, 0.06);
+  --theme-workflow-panel: rgba(255, 255, 255, 0.08);
+  --theme-workflow-border: rgba(255, 255, 255, 0.14);
+  --theme-workflow-text: #f8f7f3;
 }

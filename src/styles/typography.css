@@ -22,7 +22,7 @@ h2,
 h3 {
   font-family: var(--font-body);
   font-feature-settings: var(--heading-font-features);
-  color: var(--color-black);
+  color: var(--theme-text);
   font-weight: 500;
   margin: 0;
 }
@@ -47,5 +47,5 @@ h3 {
 p {
   margin: 0;
   line-height: 1.5;
-  color: var(--color-gray-700);
+  color: var(--theme-muted);
 }
